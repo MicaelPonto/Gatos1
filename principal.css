@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F0F0F0;
+}
+.header{
+    padding: 0px 0;
+    background-color: #00080f;
+    color: white;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
+}
+/*Icone Hamburguer*/
+.menu-icon{
+    margin: auto;
+}
+.menu-icon img{
+    width: 30px;
+    margin-left: 20px;
+}
+
+.menu-lateral{
+    position:fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    transition: left 0.5s ease;
+    z-index: 1000;
+
+}
+.menu-lateral.show{
+    left: 0;
+    opacity: 1;
+}
+.menu-lateral ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-lateral li{
+    padding: 10px 0;
+    color: black;
+    text-align: left;
+    margin-left: 15px;
+    font-family: 'Arsenal';
+    font-size: 20px;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 200px);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    animation: fadeIn 0.5 ease forwards;
+}
+.overlay.show{
+    display: block;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.5;
+    }
+}
+
+
+
+
+
+
+
+
+
+.logo-container{
+    display: inline-block;
+    vertical-align: middle;
+    flex-grow: 1;
+    text-align: center;
+}
+.header img{
+    max-width: 100px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.header h1{
+    margin: 0;
+    font-family: 'Rajdhani';
+    margin-right: 20px;
+}
+
+.header-menu{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+.header-menu li{
+    display: inline-block;
+    margin-left: 100px;
+    margin-right: 20px;
+    font-family: 'Kdam Thmor Pro';
+    font-size: larger;
+}
+
+.destaque{
+    position: absolute;
+    text-align: left;
+    margin-top: 20px;
+    top: 60px;
+    width: 100%;
+    margin-top: 55px;
+}
+.destaque h2{
+    margin: 0;
+    font-size: 24px;
+    color: #000;
+    font-family: 'Bebas Neue';
+    margin-left: 20px;
+}
+
+/* Main*/
+
+
+/* Noticias do topo*/
+/* Coluna Esquerda*/
+.lado-esquerdo{
+    width: 48%;
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 430px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.lado-esquerdo h1{
+    padding-left: 20px;
+    margin-top: 50px;
+    font-size: 50px;
+    font-family: 'Oswald';
+    color: red;
+}
+.lado-esquerdo h2{
+    font-family: 'Quicksand';
+    padding-left: 10px;
+    font-size: 15px;
+}
+.lado-esquerdo p{
+    padding-left: 20px;
+    margin-top: 20px;
+    font-family: 'Roboto Condensed';
+    color: gray;
+    font-size: 20px;
+}
+
+/*Coluna Direita*/
+
+.lado-direito{
+   width: calc(50% - 40px);
+   float: right;
+   padding: 20px 20px;
+   margin-left: 10px;
+   margin-top: 30px;
+   margin-bottom: 40px;
+   border-radius: 20px;
+   box-sizing: border-box;
+}
+
+/*SubColuna Direita do lado superior*/
+
+.coluna-cima{
+    background-image: url(imagens/Gato_Politco.jpg);
+    background-size: 70%;
+    background-position: center -40px;
+    transition:  1000ms ease-in;
+    overflow: hidden;
+    flex: 1;
+    margin: none;
+    margin-right: 10px;
+    height: 197px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+/*Animação da imagem */
+.coluna-cima:hover{
+    background-size: 75%;
+
+}
+
+.coluna-cima h1{
+    font-family: 'Oswald';
+    color: white;
+    text-shadow: 2px 4px 8px black;
+    padding-left: 15px;
+}
+.coluna-cima h2{
+    font-family: 'Quicksand';
+    color: white;
+    text-shadow: 2px 4px 8px black;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin: 0;
+    font-size: 20px;
+}
+/*Subcoluna inferior */
+.coluna-baixo{
+    background-image: url(imagens/GatoPreso1.jpg);
+    background-size: 70%;
+    background-position: center -80px;
+    transition: 1000ms ease-in;
+    flex: 1;
+    margin: none;
+    margin-right: 10px;
+    height: 197px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.coluna-baixo:hover{
+    background-size: 80%;
+}
+.coluna-baixo h1{
+    font-family: 'Oswald';
+    color: white;
+    text-shadow: 8px 8px 16px black;
+    padding-left: 15px;
+}
+.coluna-baixo h2{
+    font-family: 'Quicksand';
+    color: white;
+    text-shadow: 2px 4px 8px black;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin: 0;
+    font-size: 20px;
+}
+/* espaçamento entre as subcolunas*/
+.gap{
+    height: 10px;
+}
+/* Fim das noticias do topo */
+
+.lado-esquerdo-inferior{
+    position: relative;
+    width: calc(70% - 172px);
+    float: left;
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    height: 200px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding-bottom: 10px;
+}
+.lado-esquerdo-inferior .imagem-grande{
+    width: 40%;
+    height: 100%;
+    background-image: url(imagens/Gato_Assalto.jpg);
+    background-size: cover;
+    background-position: left;
+    border-radius: 20px;
+    
+
+}
+.lado-esquerdo-inferior h1{
+    position: absolute;
+    margin-left: 350px;
+    color:red;
+    font-size: 25px;
+    font-family: 'Oswald';
+    
+}
+.lado-esquerdo-inferior p{
+    position: absolute;
+    top: 80px;
+    color: gray;
+    margin-left: 350px;
+    font-family: 'Roboto Condensed';
+    font-size: 18px;
+}
+
+.lado-direito-inferior{
+    width: 30%;
+    float: right;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 20px;
+    margin-right: 30px;
+}
+
+.lado-direito-inferior h2{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    margin-top: 0px;
+    font-family: 'Quicksand';
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.sub-noticia, .sub-noticia2, .sub-noticia3{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.imagem-sub-noticia img, .imagem-sub-noticia2 img, .imagem-sub-noticia3 img, .imagem-sub-noticia4 img{
+    width: 30%;
+    height: 30%;
+    float: right;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.conteudo-sub-noticia h3, .conteudo-sub-noticia2 h3, .conteudo-sub-noticia3 h3, .conteudo-sub-noticia4 h3{
+    word-wrap: break-word;
+    margin-top: 10px;
+    font-family: 'Oswald';
+    color: Red;
+    font-size: 19px;
+}
+
+/* MODO NOTURNO*/
+.modo_noturno img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.modo_noturno {
+    background-color: #121212;
+    color: white;
+    text-align: right;
+}
+
+.modo_noturno .lado-esquerdo, 
+.modo_noturno .lado-direito, 
+.modo_noturno .lado-esquerdo-inferior,
+.modo_noturno .lado-direito-inferior {
+    background-color: #1c1c1c;
+    border: 1px solid white;
+}
+
+.modo_noturno .menu-lateral {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.modo_noturno .menu-lateral li {
+    color: white;
+}
+
+.modo_noturno .sub-noticia,
+.modo_noturno .sub-noticia3 {
+    border-bottom: 1px solid white;
+}
+
+.modo_noturno .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}
